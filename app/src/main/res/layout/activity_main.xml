@@ -63,6 +63,98 @@
         android:textSize="20dp"
         />
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/maths"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculus"
+            android:id="@+id/checkboxCal"
+            android:checked="true"
+            android:layout_marginLeft="15dp"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matrix"
+            android:id="@+id/checkboxMat"
+            android:checked="true"
+            android:layout_below="@id/checkboxCal"
+            android:layout_marginLeft="15dp"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vectors"
+            android:id="@+id/checkboxVec"
+            android:checked="true"
+            android:layout_below="@id/checkboxMat"
+            android:layout_marginLeft="15dp"
+            />
+
+    </RelativeLayout>
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/maths"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/rgMarital"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Married"
+            android:id="@+id/rbMarried"
+            android:layout_marginLeft="15dp"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Single"
+            android:id="@+id/rbSingle"
+            android:layout_toRightOf="@+id/rbMarried"
+            android:layout_marginLeft="15dp"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Relationship"
+            android:id="@+id/rbRel"
+            android:layout_toRightOf="@+id/rbSingle"
+            android:layout_marginLeft="15dp"
+            />
+
+    </RadioGroup>
+
+
+    <ProgressBar
+        android:id="@+id/progresBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgMarital"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="59dp"
+        android:visibility="visible"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+
+        android:max="100"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
 
 
 </RelativeLayout>
