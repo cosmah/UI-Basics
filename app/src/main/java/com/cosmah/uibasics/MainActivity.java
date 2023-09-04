@@ -1,4 +1,5 @@
 package com.cosmah.uibasics;
+import android.view.View.OnLongClickListener;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,12 +27,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //button listener
         Button btnHello = findViewById(R.id.btnHello);
         btnHello.setOnClickListener(this);
+
+        //on long click listener
+        btnHello.setOnLongClickListener(new View.OnLongClickListener(){
+            public boolean onLongClick(View v){
+                Toast.makeText(MainActivity.this, "You've long pressed the button, please release", Toast.LENGTH_LONG).show();
+                return true;
+            }
+        });
     }
 
     //onclick
     public void onHelloBtnClicked(View view){
         TextView txtWelcome = findViewById(R.id.txtWelcome);
         txtWelcome.setText("Hello Again");
+
     }
 
 
