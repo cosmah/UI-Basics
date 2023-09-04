@@ -15,13 +15,14 @@
         android:textStyle="bold"
         android:textColor="@color/colorAccent"
         android:id="@+id/txtWelcome"
+        android:layout_above="@+id/btnHello"
         />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
-        android:layout_below="@id/txtWelcome"
+        android:layout_below="@id/TextHere"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:background="#1dd12c"
@@ -36,5 +37,32 @@
         android:layout_centerInParent="true"
         android:id="@+id/btnHello"
         />
+
+    <EditText
+        android:id="@+id/edtxtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnHello"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:hint="Enter name...."
+        android:textColor="@color/colorAccent"
+        android:textStyle="italic|bold"
+        android:inputType="textAutoComplete"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TextHere"
+        android:text="Hello world"
+        android:layout_below="@+id/edtxtName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        />
+
+
 
 </RelativeLayout>
